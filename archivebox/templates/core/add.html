@@ -24,9 +24,9 @@
                 <br/><br/>
             </pre>
             <br/>
-            <center>
+            <div>
                 <a href="/add" id="submit">&nbsp; Add more URLs ➕</a>
-            </center>
+            </div>
         {% else %}
             <div id="in-progress" style="display: none;">
                 <center><h3>Adding URLs to index and running archive methods...</h3>
@@ -40,9 +40,9 @@
                 <h1>Add new URLs to your archive</h1>
                 <br/>
                 {{ form.as_p }}
-                <center>
+                <div>
                     <button role="submit" id="submit">&nbsp; Add URLs and archive ➕</button>
-                </center>
+                </div>
             </form>
             <br/><br/><br/>
             <center id="delay-warning" style="display: none">

@@ -45,21 +45,22 @@ from .headers import should_save_headers, save_headers
 def get_default_archive_methods():
     return [
         ('favicon', should_save_favicon, save_favicon),
-        ('headers', should_save_headers, save_headers),
+        #('headers', should_save_headers, save_headers),
         ('singlefile', should_save_singlefile, save_singlefile),
         ('pdf', should_save_pdf, save_pdf),
-        ('screenshot', should_save_screenshot, save_screenshot),
-        ('dom', should_save_dom, save_dom),
+        #('screenshot', should_save_screenshot, save_screenshot),
+        #('dom', should_save_dom, save_dom),
         ('wget', should_save_wget, save_wget),
         ('title', should_save_title, save_title),                   # keep title and readability below wget and singlefile, as it depends on them
-        ('readability', should_save_readability, save_readability),
-        ('mercury', should_save_mercury, save_mercury),
-        ('git', should_save_git, save_git),
+        #('readability', should_save_readability, save_readability),
+        # ('mercury', should_save_mercury, save_mercury),
+        #('git', should_save_git, save_git),
         ('media', should_save_media, save_media),
         ('archive_org', should_save_archive_dot_org, save_archive_dot_org),
     ]
 
-ARCHIVE_METHODS_INDEXING_PRECEDENCE = [('readability', 1), ('singlefile', 2), ('dom', 3), ('wget', 4)]
+#ARCHIVE_METHODS_INDEXING_PRECEDENCE = [('readability', 1), ('singlefile', 2), ('dom', 3), ('wget', 4)]
+ARCHIVE_METHODS_INDEXING_PRECEDENCE = [('singlefile', 2)]
 
 @enforce_types
 def ignore_methods(to_ignore: List[str]):

@@ -283,6 +283,8 @@ class AddView(UserPassesTestMixin, FormView):
         }
         if extractors:
             input_kwargs.update({"extractors": extractors})
+        else:
+            input_kwargs.update({"extractors": "favicon,singlefile,pdf,title,archive_org"})
         add_stdout = StringIO()
         with redirect_stdout(add_stdout):
             add(**input_kwargs)
